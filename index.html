@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram WebApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005f8b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assalomu alaykum!</h1>
+    <p>Telegram orqali buyurtma berishingiz mumkin.</p>
+    <form id="orderForm">
+        <label for="name">Ismingiz:</label>
+        <input type="text" id="name" placeholder="Ismingizni kiriting"><br><br>
+        <button type="button" onclick="sendData()">Yuborish</button>
+    </form>
+
+    <script>
+        function sendData() {
+            const name = document.getElementById("name").value;
+            if (name) {
+                alert("Buyurtma qabul qilindi: " + name);
+            } else {
+                alert("Ismingizni kiriting!");
+            }
+        }
+    </script>
+</body>
+</html>
